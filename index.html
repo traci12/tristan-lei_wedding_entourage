@@ -29,16 +29,52 @@
 
   <body class="index" itemscope="" itemtype="https://schema.org/" inmaintabuse="1" data-new-gr-c-s-check-loaded="14.1221.0" data-gr-ext-installed="" cz-shortcut-listen="true">
 
+    <nav class="nav">
+      <div class="nav-container">
+        <!-- Hamburger Icon -->
+        <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+        
+        <!-- Navigation List (Hidden on Mobile) -->
+        <ul class="nav-list">
+          <li><a href="#marriage">ABOUT</a></li>
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#reception">RECEPTION</a></li>
+          <li><a href="#motif">MOTIF</a></li>
+          <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+      
+      <!-- Side Navigation (Hidden on Mobile by default) -->
+      <div class="side-nav">
+        <button class="close-btn" aria-label="Close menu">&times;</button>
+        <a href="#marriage">ABOUT</a>
+        <a href="#events">EVENTS</a>
+        <a href="#reception">RECEPTION</a>
+        <a href="#motif">MOTIF</a>
+        <a href="#rsvp">RSVP</a>
+      </div>
+    </nav>
+  
+    <script>
+      // Wait for the DOM content to be loaded before attaching event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const sideNav = document.querySelector('.side-nav');
+        const closeBtn = document.querySelector('.close-btn');
+  
+        // Toggle side nav when the hamburger button is clicked
+        hamburger.addEventListener('click', function() {
+          sideNav.classList.toggle('active');
+        });
+  
+        // Close side nav when the close button is clicked
+        closeBtn.addEventListener('click', function() {
+          sideNav.classList.remove('active');
+        });
+      });
+    </script>
     
-<nav class="nav" vocab="http://schema.org/" typeof="SiteNavigationElement" role="navigation" style="transform: translateY(0%); will-change: transform, opacity; opacity: 1;">
-  <ul class="nav-list">
-    <li><a href="#marriage">ABOUT</a></li>
-    <li><a href="#events">EVENTS</a></li>
-    <li><a href="#reception">RECEPTION</a></li>
-    <li><a href="#motif">MOTIF</a></li>
-    <li><a href="#rsvp">RSVP</a></li>
-  </ul>
-</nav>
+    
 
 
 <header class="index-header">
